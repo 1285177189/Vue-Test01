@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>emjy</title>
+    <script src="static/js/swiper.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script>
+    (function(doc,win){
+        var docEl=doc.documentElement;
+        var run=function(){
+        var clientWidth=docEl.clientWidth;
+            console.log(clientWidth);
+            if(!clientWidth)return;
+                docEl.style.fontSize=23/375*clientWidth+"px";
+        } 
+            if(!doc.addEventListener)return;
+            var resizeEvt='orientationchange' in window?'orientationchange':"resize";
+                window.addEventListener(resizeEvt, run, false);
+                doc.addEventListener("DOMContentLoaded",run,false); 
+    })(document,window);
+</script>
